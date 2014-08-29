@@ -1,12 +1,13 @@
 {
   "name": "technodrome",
   "version": "1.0.0",
-  "description": "",
+  "description": "revisit service host",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Dan Flettre",
   "license": "ISC",
   "dependencies": {
     "butts-gm": "^1.0.2",
@@ -15,5 +16,19 @@
     "joi": "^4.6.2",
     "revisit-mutagen": "^1.0.3",
     "trippyshift": "^1.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flet/technodrome.git"
+  },
+  "keywords": [
+    "revisit.link",
+    "revisit",
+    "hapi",
+    "server"
+  ],
+  "bugs": {
+    "url": "https://github.com/flet/technodrome/issues"
+  },
+  "homepage": "https://github.com/flet/technodrome"
 }
