@@ -1,6 +1,6 @@
 var Hapi = require('hapi');
 
-var server = Hapi.createServer('localhost', process.env.PORT || 8080);
+var server = Hapi.createServer('0.0.0.0', process.env.PORT || 8080);
 
 server.pack.register({
     plugin: require('revisit-mutagen'),
