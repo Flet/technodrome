@@ -14,6 +14,6 @@ These modules are great examples of the pattern:
 
 Thanks
 ------
-Thanks to @kid-icarus and @meandavejustice for sharing their inspiring code.
+Thanks to [kid-icarus](https://github.com/kid-icarus) and [meandavejustice](https://github.com/meandavejustice) for sharing their inspiring code.
 
-And special thanks to @ednapiranha and the other @revisitors for making something cool and sharing it.
+And special thanks to [ednapiranha](https://github.com/ednapiranha) and the other [revisitors](https://github.com/revisitors) for making something cool and sharing it.
