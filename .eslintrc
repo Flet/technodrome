@@ -1,0 +1,13 @@
+{
+  "env": {
+    "node": true,
+    "mocha": true,
+    "jasmine": true
+  },
+  "rules": {
+    "quotes": [2, "single"],
+    "strict": 0,
+    "curly": [2, "multi"],
+    "semi": [2, "never"]
+  }
+}
