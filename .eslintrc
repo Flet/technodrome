@@ -8,6 +8,7 @@
     "quotes": [2, "single"],
     "strict": 0,
     "curly": [2, "multi"],
+    "no-use-before-define": [2, "nofunc"],
     "semi": [2, "never"]
   }
 }
