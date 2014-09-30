@@ -9,6 +9,11 @@ server.pack.register({
         glitches: {
             trippyshift: require('trippyshift'),
             butts: require('butts-gm'),
+            rando: {
+                glitch: require('rando-revisit-service'),
+                rawPayload: true,
+                staticSampleJpg: 'randosample.jpg'
+            },
             echoplease: function(buffer, callback) {
                 // you can just write your own 'mutator' inline too!
                 callback(null, buffer)
