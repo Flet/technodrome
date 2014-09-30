@@ -1,8 +1,17 @@
-var Hapi = require('hapi')
+var Hapi = require('hapi'),
+    randoService = require('./randoService.js')
 
-var server = Hapi.createServer('0.0.0.0', process.env.PORT || 8080)
+var server = Hapi.createServer('0.0.0.0', 8081)
 
-server.pack.register({
+server.pack.register([{
+    plugin: require('good'),
+    options: {
+        subscribers: {
+            'console': ['ops', 'request', 'log', 'error'],
+            'http://localhost/logs': ['log']
+        }
+    }
+}, {
     plugin: require('revisit-mutagen'),
     options: {
         moreSamples: ['face.jpg'],
@@ -12,10 +21,14 @@ server.pack.register({
             echoplease: function(buffer, callback) {
                 // you can just write your own 'mutator' inline too!
                 callback(null, buffer)
+            },
+            rando: {
+                glitch: randoService,
+                rawPayload: true
             }
         }
     }
-}, function(err) {
+}], function(err) {
     if (err) throw err
     server.start(function() {
 
