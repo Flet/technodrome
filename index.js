@@ -1,13 +1,19 @@
-var Hapi = require('hapi')
+var Hapi = require('hapi'),
+    Good = require('good')
 
 var server = Hapi.createServer('0.0.0.0', process.env.PORT || 8080)
 
 server.pack.register([{
     plugin: require('good'),
     options: {
-        subscribers: {
-            'console': ['ops', 'request', 'log', 'error']
-        }
+        reporters: [{
+            reporter: Good.GoodConsole,
+            args: [{
+                events: {
+                    ops: '*'
+                }
+            }]
+        }]
     }
 }, {
     plugin: require('revisit-mutagen'),
